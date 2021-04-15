@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+body {
+    width: 100%;
+    height: 100%;
+}
+.nav-bar {
+    width: 100%;
+    height: 60px;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 100;
+}
+.nav-bar .logo {
+    font-size: 30px;
+    color: #4d4f68;
+    padding-right: 10px; 
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+.nav-links li a{
+    text-decoration: none;
+    padding: 10px;
+    color: #16161b;
+    height: 100%;
+    text-align: center;
+}
+.nav-links li a:hover {
+    background: #fdc45d;
+    transition: 1s background ease-out .2s; 
+    box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.4);
+}
+#home {
+    background: url(./portofolioIMG/—Pngtree—orange-yellow-paper-cut-banner_1175907.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.contain {
+    width: 100%;
+    height: 100%;
+    padding: 30px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.mytext {
+    text-align: left;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mytext h1 {
+    margin: 30px 0;
+    font-size: 40px;
+    color: #4d4f68;
+}
+.mytext p {
+    color: #fdc45d;
+    font-size: 25px;
+}
+.mytext a {
+    padding: 10px;
+    width: 120px;
+    background: white;
+    color: #f17b00;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 1s all ease-out .2s;
+}
+.mytext a:hover {
+    box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.4);
+}
+.contentImg {
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    display: flex;
+}
+.contentImg img {
+    width: 100%;
+    height: 80%;
+    animation: turn 5s linear infinite .2s;
+}
+.contentImg img:hover {
+    cursor: pointer;
+}
+@keyframes turn {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+#skill {
+    background: white;
+    width: 100%;
+    padding: 50px 50px;
+}
+.myskills {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+#skill h1{
+    color: #f17b00;
+    font-size: 25px;
+    text-align: center;
+    padding: 20px;
+    letter-spacing: 8px;
+}
+.myskills div{
+    width: 250px;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #4d4f68;
+}
+.myskills div img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+#project {
+    width: 100%;
+    background: #f17b00;
+    padding: 50px;
+}
+#project h1 {
+    font-size: 25px;
+    text-align: center;
+    padding: 20px;
+    letter-spacing: 8px;
+    color: white;
+}
+.project-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.projectX {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.projectX li {
+    width: 300px;
+    height: 200px;
+    place-items: center;
+}
+.projectX li a{
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+    display: flex;
+    place-items: center;
+}
+.projectX li a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.projectX li a::before {
+    content: "VIEW";
+    background: rgba(77, 79, 104, 0.7);
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #f17b00;
+    font-size: 30px;
+    transition: 1s background ease-out .2s;
+}
+.projectX li a:hover::before {
+    content:"";
+    background: rgba(77, 79, 104, 0);
+    position: absolute;
+    width: 300px;
+    height: 200px;
+}
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    color: #16161b;
+}
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.social a {
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social a:hover {
+    transition: 1s all linear .2s;
+    animation: turn 1s linear infinite .1s;
+}
+.social a img {
+    object-fit: contain;
+    width: 100%;
+}
+@media (max-width: 600px) {
+    .nav-bar .logo{
+        font-size: 23px;
+    }
+    .nav-bar .nav-links a{
+        font-size: 13px;
+        padding: 5px;
+    }
+    .mytext p, .mytext h1 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .contentImg {
+        display: none;
+    }
+    .mytext {
+        width: 100%;
+    }
+}
